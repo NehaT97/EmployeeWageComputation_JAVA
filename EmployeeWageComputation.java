@@ -6,18 +6,20 @@ public class EmployeeWageComputation {
 
         System.out.println("WELCOME TO EMPLOYEE WAGE COMPUTATION");
 
-	 //TO check employee is present or absent
-        int IS_FULL_TIME = 1;
-        double empStatus = Math.floor(Math.random() * 10) % 2;
-        System.out.println(empStatus); //random value stored in empStatus;
+        //Daily Wage Of Employee
+        int isPresent=1;
+        int empRatePerHr=20;
+        int EmpWage=0;
+        int empHrs=0;
 
-        if (empStatus == IS_FULL_TIME)
-            System.out.println("Employee is Present");
-        else
-            System.out.println("Employee is Absent");
+        double randomCheck = Math.floor(Math.random() * 10) % 2;
+        if(isPresent == randomCheck)
+                empHrs=8;
+     	else
+                empHrs=0;
 
-
-       
+     	EmpWage=empRatePerHr*empHrs ;
+        System.out.println("Emp Wage: " + EmpWage);
     }
 
 }
